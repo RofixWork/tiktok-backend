@@ -4,7 +4,6 @@ const PostSchema = new mongoose.Schema({
   url: {
     type: String,
     required: true,
-    trim: true,
   },
   channel: {
     type: String,
