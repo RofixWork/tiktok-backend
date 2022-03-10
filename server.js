@@ -5,11 +5,12 @@ const connect = require("./db/connect.js");
 const notFound = require("./middlewares/not-found.js");
 const errorHandler = require("./middlewares/error-handler.js");
 const routerPosts = require("./routes/posts.route.js");
+const cors = require("cors");
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use(cors());
 // ROUTES
 app.use("/api/v1/posts", routerPosts);
 
